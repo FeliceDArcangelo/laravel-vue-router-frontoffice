@@ -6,12 +6,13 @@
       titleEx,
     }
   }
+
 </script>
 
 <template>
-  <titleEx/>
+  <router-view></router-view>
 </template>
 
-<style scoped>
-
+<style lang="scss">
+@import 'bootstrap/scss/bootstrap';
 </style>
