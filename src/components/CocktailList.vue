@@ -56,7 +56,7 @@ export default {
       <div class="d-flex justify-content-center mt-5">
           <ul class="pagination">
             <li class="page-item" :class="{ disabled: currentPage == 1 }">
-              <a class="page-link" href="#" @click.prevent="prevPage">Previous</a>
+              <a class="page-link" href="#" @click.prevent="prevPage">«</a>
             </li>
       
             <li
@@ -71,7 +71,7 @@ export default {
             </li>
       
             <li class="page-item" :class="{ disabled: currentPage == nPages }">
-              <a class="page-link" href="#" @click.prevent="nextPage">Next</a>
+              <a class="page-link" href="#" @click.prevent="nextPage">»</a>
             </li>
           </ul>
         </div>
@@ -83,6 +83,7 @@ export default {
 
 <style scoped lang="scss">
 .listContainer {
-  padding-inline: 250px;
+  max-width: 1000px;
+  margin: auto;
 }
 </style>
