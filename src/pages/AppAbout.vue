@@ -12,19 +12,21 @@ export default {
         </div>
     </div>
 
-    <div class="container my-5 text-light">
-        <div class="row">
-            <div class="col-8">
-                <div class="m-5">
-                    Benvenuti al nostro cocktail bar, dove la passione per i cocktail artigianali si unisce all'ospitalità eccezionale. Con ingredienti selezionati e bartender esperti, offriamo esperienze uniche in un'atmosfera accogliente. Siamo qui per creare momenti indimenticabili insieme a voi. Prova i nostri cocktail e lasciati sorprendere.
+    <div class="container-fluid py-5 text-light bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 text-black fs-6">
+                    <div class="m-5">
+                        Benvenuti al nostro cocktail bar, dove la passione per i cocktail artigianali si unisce all'ospitalità eccezionale. Con ingredienti selezionati e bartender esperti, offriamo esperienze uniche in un'atmosfera accogliente. Siamo qui per creare momenti indimenticabili insieme a voi. Prova i nostri cocktail e lasciati sorprendere.
+                    </div>
+    
+                    <div class="m-5">
+                        Vieni a trovarci e scopri il fascino e l'eleganza dei nostri cocktail artigianali. Siamo entusiasti di darti il benvenuto e di accompagnarti in un viaggio unico attraverso i sapori e le emozioni che solo un cocktail bar come il nostro può offrire. La tua soddisfazione è la nostra più grande ricompensa.
+                    </div>
                 </div>
-
-                <div class="m-5">
-                    Vieni a trovarci e scopri il fascino e l'eleganza dei nostri cocktail artigianali. Siamo entusiasti di darti il benvenuto e di accompagnarti in un viaggio unico attraverso i sapori e le emozioni che solo un cocktail bar come il nostro può offrire. La tua soddisfazione è la nostra più grande ricompensa.
+    
+                <div class="col-4 img-container">
                 </div>
-            </div>
-
-            <div class="col-4 img-container">
             </div>
         </div>
     </div>
@@ -32,7 +34,7 @@ export default {
 
 <style lang="scss" scoped>
     .main-container{
-        height: 100vh;
+        height: calc(100vh - 126px);
         background-image: url('https://flawless.life/wp-content/uploads/2021/03/Cocktail-Bar-Roma-cover.jpg');
         background-position: center;
         background-repeat: no-repeat;

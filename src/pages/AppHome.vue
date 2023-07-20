@@ -9,9 +9,8 @@ export default {
 </script>
 
 <template>
-  <div class="text-center text-danger">Ecco i nostri cocktails</div>
   <div class="container">
-		<h1 class="text-center text-light">Nome Bar</h1>
+		<h1 class="text-center text-light mt-4">Nome Bar</h1>
 
 		<div id="carouselExample" class="carousel slide">
 			<div class="carousel-inner">
@@ -57,6 +56,7 @@ export default {
 			</button>
 		</div>
 	</div>
+
   <CocktailList></CocktailList>
 
 

@@ -13,18 +13,18 @@ export default {
   <div class="card h-100">
     <img
       :src="cocktail.strDrinkThumb"
-      class="card-img-top"
+      class="card-img-top rounded-top"
       :alt="cocktail.strDrink"
       style="height: 250px"
     />
-    <div class="card-body">
+    <div class="card-body bg-black text-light">
       <h5 class="card-title">{{ cocktail.strDrink }}</h5>
       <p class="card-text">{{ cocktail.strInstructions }}</p>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Category: {{ cocktail.strCategory }}</li>
-      <li class="list-group-item">Glass type: {{ cocktail.strGlass }}</li>
-      <li class="list-group-item">
+      <li class="list-group-item bg-black text-light">Category: {{ cocktail.strCategory }}</li>
+      <li class="list-group-item bg-black text-light">Glass type: {{ cocktail.strGlass }}</li>
+      <li class="list-group-item bg-black text-light">
         Alcoholic:
         <span v-if="cocktail.strAlcoholic === 'Alcoholic'">Yes</span>
         <span v-else>No</span>
@@ -40,4 +40,5 @@ export default {
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>
