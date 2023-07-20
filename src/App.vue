@@ -1,23 +1,18 @@
 <script>
-import titleEx from "./components/titleEx.vue";
-import AppNav from "./components/AppNav.vue";
-import AppFooter from "./components/AppFooter.vue";
+import CocktailList from "./components/CocktailList.vue";
 
 export default {
   components: {
-    titleEx,
-    AppNav,
-    AppFooter,
+    CocktailList,
   },
 };
 </script>
 
 <template>
-  <AppNav />
-  <router-view></router-view>
-  <AppFooter />
+  <CocktailList />
 </template>
 
 <style lang="scss">
 @import "bootstrap/scss/bootstrap";
 </style>
+

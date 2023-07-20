@@ -15,7 +15,7 @@ export default {
       :src="cocktail.strDrinkThumb"
       class="card-img-top"
       :alt="cocktail.strDrink"
-      style="height: 200px"
+      style="height: 250px"
     />
     <div class="card-body">
       <h5 class="card-title">{{ cocktail.strDrink }}</h5>
@@ -33,7 +33,7 @@ export default {
     <div class="cocktail-body">
       <!-- <router-link
           class="btn btn-primary m-2"
-          :to="{ name: 'cocktails.show', params: { id: dataCocktail.idDrink } }"
+          :to="{ name: 'cocktails.show', params: { id: cocktail.idDrink } }"
           >View</router-link
         > -->
     </div>
