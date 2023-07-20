@@ -20,4 +20,7 @@ export default {
 
 <style lang="scss">
 @import "bootstrap/scss/bootstrap";
+body{
+  background-color: black;
+}
 </style>

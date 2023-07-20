@@ -12,7 +12,7 @@ export default {
         </div>
     </div>
 
-    <div class="container my-5">
+    <div class="container my-5 text-light">
         <div class="row">
             <div class="col-8">
                 <div class="m-5">
