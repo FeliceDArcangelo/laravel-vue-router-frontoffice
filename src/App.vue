@@ -1,17 +1,15 @@
 <script>
-  import titleEx from './components/titleEx.vue';
+import CocktailList from "./components/CocktailList.vue";
 
-  export default{
-    components: {
-      titleEx,
-    }
-  }
+export default {
+  components: {
+    CocktailList,
+  },
+};
 </script>
 
 <template>
-  <titleEx/>
+  <CocktailList />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
