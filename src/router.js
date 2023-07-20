@@ -1,6 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import CocktailList from "./components/CocktailList.vue";
+import AppAbout from "./pages/AppAbout.vue";
+import AppHome from "./pages/AppHome.vue";
+import AppContacts from "./pages/AppContacts.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -10,5 +13,22 @@ const router = createRouter({
       name: "cocktails",
       component: CocktailList,
     },
+    {
+      path: "/home",
+      name: "home",
+      component: AppHome,
+    },
+    {
+      path: "/about",
+      name: "about",
+      component: AppAbout,
+    },
+    {
+      path: "/contacts",
+      name: "contacts",
+      component: AppContacts,
+    },
   ],
 });
+
+export { router }
