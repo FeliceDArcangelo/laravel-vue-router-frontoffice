@@ -31,11 +31,11 @@ export default {
       </li>
     </ul>
     <div class="cocktail-body">
-      <!-- <router-link
-          class="btn btn-primary m-2"
-          :to="{ name: 'cocktails.show', params: { id: cocktail.idDrink } }"
-          >View</router-link
-        > -->
+      <router-link
+        class="btn btn-primary m-2"
+        :to="{ name: 'cocktails.show', params: { id: cocktail.id } }"
+        >View</router-link
+      >
     </div>
   </div>
 </template>
