@@ -1,5 +1,5 @@
 <script>
-<<<<<<< HEAD
+
 import CocktailList from '../components/CocktailList.vue';
 export default {
   components: { 
@@ -10,13 +10,7 @@ export default {
 
 <template>
   <div class="text-center text-danger">Ecco i nostri cocktails</div>
-  <CocktailList></CocktailList>
-=======
-	export default {};
-</script>
-
-<template>
-	<div class="container">
+  <div class="container">
 		<h1 class="text-center text-light">Nome Bar</h1>
 
 		<div id="carouselExample" class="carousel slide">
@@ -63,15 +57,9 @@ export default {
 			</button>
 		</div>
 	</div>
-  
-  <div class="container-fluid">
-    <h2 class="text-center">Cocktails</h2>
+  <CocktailList></CocktailList>
 
-    <div class="card-container">
-    </div>
-    
-  </div>
->>>>>>> origin/homepage-style-giulio
+
 </template>
 
 <style lang="scss" scoped>
