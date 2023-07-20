@@ -45,36 +45,40 @@ export default {
 </script>
 
 <template>
-  <nav>
-    <ul class="pagination">
-      <li class="page-item" :class="{ disabled: currentPage == 1 }">
-        <a class="page-link" href="#" @click.prevent="prevPage">Previous</a>
-      </li>
-
-      <li
-        v-for="page in nPages"
-        :key="page"
-        class="page-item"
-        :class="{ active: page == currentPage }"
-      >
-        <a class="page-link" href="#" @click.prevent="currentPage = page">{{
-          page
-        }}</a>
-      </li>
-
-      <li class="page-item" :class="{ disabled: currentPage == nPages }">
-        <a class="page-link" href="#" @click.prevent="nextPage">Next</a>
-      </li>
-    </ul>
-  </nav>
-
-  <div class="container listContainer">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-      <div class="col mt-3" v-for="cocktail in arrCocktails" :key="cocktail.id">
-        <CocktailCard :cocktail="cocktail" />
+  <div class="containe bg-light">  
+    <div class="container listContainer">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+        <div class="col mt-3" v-for="cocktail in arrCocktails" :key="cocktail.id">
+          <CocktailCard :cocktail="cocktail" />
+        </div>
       </div>
+      
+      <div class="d-flex justify-content-center mt-5">
+          <ul class="pagination">
+            <li class="page-item" :class="{ disabled: currentPage == 1 }">
+              <a class="page-link" href="#" @click.prevent="prevPage">Previous</a>
+            </li>
+      
+            <li
+              v-for="page in nPages"
+              :key="page"
+              class="page-item"
+              :class="{ active: page == currentPage }"
+            >
+              <a class="page-link" href="#" @click.prevent="currentPage = page">{{
+                page
+              }}</a>
+            </li>
+      
+            <li class="page-item" :class="{ disabled: currentPage == nPages }">
+              <a class="page-link" href="#" @click.prevent="nextPage">Next</a>
+            </li>
+          </ul>
+        </div>
     </div>
+
   </div>
+
 </template>
 
 <style scoped lang="scss">

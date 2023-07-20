@@ -14,7 +14,7 @@ const router = createRouter({
       component: CocktailList,
     },
     {
-      path: "/home",
+      path: "/",
       name: "home",
       component: AppHome,
     },

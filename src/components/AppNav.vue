@@ -6,7 +6,7 @@ export default {};
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <router-link :to="{ name: 'home' }" class="navbar-brand"
-        >Homepage</router-link
+        ><img class="logo" src="../assets/img/minimalistic-logo-alcoholic-bar-shop-restaurant-martini-cocktail-glass-with-straw-white-background-with-inscription-cocktail-bar_450656-249.jpg" alt=""></router-link
       >
 
       <button
@@ -22,7 +22,12 @@ export default {};
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <router-link :to="{ name: 'home' }" class="navbar-brand"
+              >Home</router-link
+            >
+          </li>
           <li class="nav-item">
             <router-link :to="{ name: 'about' }" class="navbar-brand"
               >About</router-link
@@ -34,18 +39,14 @@ export default {};
             >
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.logo{
+  height: 100px;
+  object-fit: cover;
+}
+</style>
