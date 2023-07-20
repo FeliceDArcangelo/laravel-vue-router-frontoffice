@@ -12,4 +12,6 @@ export default {
   <CocktailList />
 </template>
 
-<style scoped></style>
+<style lang="scss">
+@import "bootstrap/scss/bootstrap";
+</style>

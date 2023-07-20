@@ -68,7 +68,7 @@ export default {
     </ul>
   </nav>
 
-  <div class="container">
+  <div class="container listContainer">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
       <div class="col mt-3" v-for="cocktail in arrCocktails" :key="cocktail.id">
         <CocktailCard :cocktail="cocktail" />
@@ -77,4 +77,8 @@ export default {
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.listContainer {
+  padding-inline: 250px;
+}
+</style>
