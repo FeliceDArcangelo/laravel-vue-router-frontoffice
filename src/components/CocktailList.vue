@@ -67,7 +67,7 @@ export default {
 
 <template>
     <select name="" id="" v-model="category">
-      <option value="" v-for="cocktail in arrCategory" @change="changeCategory">
+      <option value="" v-for="cocktail in arrCategory" @change="changeCategory" :key="cocktail">
         {{ cocktail.strCategory }}
       </option>
     </select>
