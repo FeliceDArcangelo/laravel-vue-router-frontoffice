@@ -145,7 +145,7 @@ label {
 }
 
 .left {
-  border: 3px solid lightgrey;
+  border: 6px solid black;
 }
 
 .btn {
