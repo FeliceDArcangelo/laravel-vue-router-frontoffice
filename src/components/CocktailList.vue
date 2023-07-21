@@ -67,7 +67,7 @@
   <div class="container-card bg-light">
     <div class="container listContainer">
 
-      <select name="" id="" v-model="category" @change="changeCategory">
+      <select name="" id="filter-cocktails" v-model="category" @change="changeCategory">
         <option
           :value="cocktail.strCategory"
           v-for="cocktail in arrCategory"
@@ -134,6 +134,10 @@
 		box-shadow: none !important;
 		color: #b9bc0d;
 	}
+  #filter-cocktails{
+    width: 95%;
+    height: 30px;
+  }
 </style>
 
 category:
