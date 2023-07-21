@@ -66,6 +66,7 @@ export default {
   z-index: -99;
   height: 100%;
   #video-show{
+    display: block;
     min-width: 100%;
     min-height: 100%;
     object-fit: contain;
