@@ -9,10 +9,12 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-		<h1 class="text-center text-light mt-4">Nome Bar</h1>
-
-		<div id="carouselExample" class="carousel slide">
+  <div class="">
+	  
+	  <div id="carouselExample" class="carousel slide">
+			<h1 class="text-center text-light mt-4 bar-title">
+				<img src="../assets/img/Risorsa 3.png" alt="">
+			</h1>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<img
@@ -63,7 +65,17 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+.carousel.slide{
+	position: relative;
+}
+.bar-title{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+	
+}
 
 .container-fluid{
   height: 500px;
