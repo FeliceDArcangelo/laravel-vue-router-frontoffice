@@ -45,7 +45,7 @@ export default {
 </script>
 
 <template>
-  <div class="containe bg-light">  
+  <div class="container-card bg-light">  
     <div class="container listContainer">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
         <div class="col mt-3" v-for="cocktail in arrCocktails" :key="cocktail.id">
@@ -56,7 +56,7 @@ export default {
       <div class="d-flex justify-content-center mt-5">
           <ul class="pagination">
             <li class="page-item" :class="{ disabled: currentPage == 1 }">
-              <a class="page-link" href="#" @click.prevent="prevPage">Previous</a>
+              <a class="page-link" href="#" @click.prevent="prevPage">«</a>
             </li>
       
             <li
@@ -71,7 +71,7 @@ export default {
             </li>
       
             <li class="page-item" :class="{ disabled: currentPage == nPages }">
-              <a class="page-link" href="#" @click.prevent="nextPage">Next</a>
+              <a class="page-link" href="#" @click.prevent="nextPage">»</a>
             </li>
           </ul>
         </div>
@@ -82,7 +82,26 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.listContainer {
-  padding-inline: 250px;
+.container-card{
+  padding-top: 3em;
 }
+.listContainer {
+  max-width: 1000px;
+  margin: auto;
+}
+.page-link{
+  background-color: transparent !important;
+  border: none;
+  color: black;
+}
+.pagination .active a{
+  color: black;
+  text-decoration: underline;
+  }
+  .pagination a:focus {
+    box-shadow: none !important;
+    color: #b9bc0d;
+}
+
+
 </style>
