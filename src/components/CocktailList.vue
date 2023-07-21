@@ -8,6 +8,8 @@ export default {
   data() {
     return {
       arrCocktails: [],
+      arrCategory: [],
+      category: null,
       currentPage: 1,
       nPages: 0,
       store,
@@ -32,9 +34,28 @@ export default {
           this.nPages = response.data.last_page;
         });
     },
+    getCategory() {
+      axios
+        .get("http://localhost:8000/api/categories")
+        .then((response) => {
+          this.arrCategory = response.data.results;
+        });
+    },
+    changeCategory(){
+      axios
+        .get("http://localhost:8000/api/categories", {
+          params:{
+            category: this.category
+          }
+        })
+        .then((response) => {
+          this.arrCategory = response.data.results;
+        });
+    }
   },
   created() {
     this.getCocktails();
+    this.getCategory();
   },
   watch: {
     currentPage() {
@@ -45,11 +66,17 @@ export default {
 </script>
 
 <template>
+    <select name="" id="" v-model="category">
+      <option value="" v-for="cocktail in arrCategory" @change="changeCategory">
+        {{ cocktail.strCategory }}
+      </option>
+    </select>
+
   <div class="container-card bg-light">  
     <div class="container listContainer">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
         <div class="col mt-3" v-for="cocktail in arrCocktails" :key="cocktail.id">
-          <CocktailCard :cocktail="cocktail" />
+          <CocktailCard :cocktail="cocktail" :arrCocktails="arrCocktails"/>
         </div>
       </div>
       
@@ -105,3 +132,5 @@ export default {
 
 
 </style>
+
+category:  
