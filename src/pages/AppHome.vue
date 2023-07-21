@@ -72,7 +72,7 @@ export default {
 			</button>
 		</div>
 	</div>
-
+	<h2 class="nostridrink">I nostri Cocktails!</h2>
   <CocktailList></CocktailList>
 
 
@@ -102,6 +102,14 @@ export default {
 .carousel-item img{
 	height: 70vh;
 	object-fit: cover;
+}
+
+.nostridrink{
+	width: 100%;
+	text-align: center;
+	padding: 2em;
+	background-color: rgb(248, 249, 250);
+	margin: 0;
 }
 
 .container-fluid{
