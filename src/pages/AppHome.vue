@@ -11,32 +11,46 @@ export default {
 <template>
   <div class="">
 	  
-	  <div id="carouselExample" class="carousel slide">
+	  <div id="carouselExample" class="carousel slide carousel-fade">
 			<h1 class="text-center text-light mt-4 bar-title">
-				<img src="../assets/img/Risorsa 3.png" alt="">
+				<img src="../assets/img/Risorsa 8.png" alt="">
 			</h1>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<img
-						src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+						src="../assets/img/cocktail3.jpg"
 						class="d-block w-100 "
 						alt="..."
 					/>
 				</div>
 				<div class="carousel-item">
-          <img
-          src="https://www.thegentlemansjournal.com/_next/image/?url=https%3A%2F%2Fcms.thegentlemansjournal.com%2Fwp-content%2Fuploads%2F2016%2F08%2Fjez-timms-jIejftgdU3w-unsplash-1296x864.jpg&w=3840&q=75"
-          class="d-block w-100 caro-img"
-          alt="..."
+					<img
+					src="../assets/img/cocktail1.jpg"
+					class="d-block w-100 caro-img"
+					alt="..."
 					/>
 				</div>
-        <div class="carousel-item">
-          <img
-            src="https://images.unsplash.com/photo-1485265449635-ca623a55e95c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80"
-            class="d-block w-100"
-            alt="..."
-          />
-        </div>
+				<div class="carousel-item">
+					<img
+						src="../assets/img/cocktail2.jpg"
+						class="d-block w-100"
+						alt="..."
+					/>
+				</div>
+				<div class="carousel-item">
+					<img
+						src="../assets/img/cocktail5.jpg"
+						class="d-block w-100"
+						alt="..."
+					/>
+				</div>
+				<div class="carousel-item">
+					<img
+						src="../assets/img/cocktail4.jpg"
+						class="d-block w-100"
+						alt="..."
+					/>
+				</div>
 			</div>
 			<button
 				class="carousel-control-prev"
@@ -74,7 +88,20 @@ export default {
 	top: 0;
 	width: 100%;
 	z-index: 99;
-	
+	img{
+		width: 30%;
+	}
+	animation: title-enter;
+    animation-duration: 5s;
+    @keyframes title-enter {
+        0%{
+            top: -3em;
+        }
+    }
+}
+.carousel-item img{
+	height: 70vh;
+	object-fit: cover;
 }
 
 .container-fluid{

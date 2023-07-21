@@ -49,4 +49,6 @@ export default {};
   height: 100px;
   object-fit: cover;
 }
+
+
 </style>
