@@ -4,9 +4,9 @@ export default {};
 
 <template>
   <footer class="footer bg-dark text-white">
-    <div class="container-fluid">
+    <div class="container-fluid d-flex flex-column align-items-center">
       <div class="row">
-        <div class="col-12 my-4 fw-bold title">COCKTAIL made with Boolean</div>
+        <div class="col-12 my-3 fw-bold title">COCKTAIL made with Boolean</div>
       </div>
       <div class="row">
         <div class="col-12 mt-3">
