@@ -63,19 +63,20 @@
 </script>
 
 <template>
-	<select name="" id="" v-model="category" @change="changeCategory">
-    <option>all</option>
-		<option
-			:value="cocktail.strCategory"
-			v-for="cocktail in arrCategory"
-			:key="cocktail"
-		>
-			{{ cocktail.strCategory }}
-		</option>
-	</select>
+  
+  <div class="container-card bg-light">
+    <div class="container listContainer">
 
-	<div class="container-card bg-light">
-		<div class="container listContainer">
+      <select name="" id="" v-model="category" @change="changeCategory">
+        <option
+          :value="cocktail.strCategory"
+          v-for="cocktail in arrCategory"
+          :key="cocktail"
+        >
+          {{ cocktail.strCategory }}
+        </option>
+      </select>
+
 			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
 				<div
 					class="col mt-3"
