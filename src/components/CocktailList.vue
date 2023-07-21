@@ -45,7 +45,7 @@ export default {
 </script>
 
 <template>
-  <div class="containe bg-light">  
+  <div class="container-card bg-light">  
     <div class="container listContainer">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
         <div class="col mt-3" v-for="cocktail in arrCocktails" :key="cocktail.id">
@@ -82,8 +82,26 @@ export default {
 </template>
 
 <style scoped lang="scss">
+.container-card{
+  padding-top: 3em;
+}
 .listContainer {
   max-width: 1000px;
   margin: auto;
 }
+.page-link{
+  background-color: transparent !important;
+  border: none;
+  color: black;
+}
+.pagination .active a{
+  color: black;
+  text-decoration: underline;
+  }
+  .pagination a:focus {
+    box-shadow: none !important;
+    color: #b9bc0d;
+}
+
+
 </style>

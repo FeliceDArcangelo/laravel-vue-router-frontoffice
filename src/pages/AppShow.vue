@@ -64,12 +64,11 @@ export default {
 .showContainer{
   position: relative;
   z-index: -99;
-  right: 0;
-  top: 0;
+  height: 100%;
   #video-show{
     min-width: 100%;
     min-height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     filter: brightness(.3);
   }
 }
@@ -87,6 +86,19 @@ export default {
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       border-radius: .5em;
     }
+    section{
+      animation: slide-show;
+      animation-duration: .8s;
+      animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+      @keyframes slide-show{
+      0%{
+          margin-left: 100em;
+      }
+      100%{
+          margin-left: 0;
+      }
+    }
+  }
     .color-categories{
       color: rgb(117, 117, 89);
     }
