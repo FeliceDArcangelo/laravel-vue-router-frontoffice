@@ -1,86 +1,89 @@
 <script>
-import axios from "axios"
-import { store } from "../store"
+import axios from "axios";
+import { store } from "../store";
 
-  export default{
-    data() {
-      return {
-        store,
-        name: '',
-        email: '',
-        message: '',
-        newsletter: true,
-        showSuccess: false,
-        isSending: false,
-        showError: false,
-        errors: {},
-      }
+export default {
+  data() {
+    return {
+      store,
+      name: "",
+      email: "",
+      message: "",
+      newsletter: true,
+      showSuccess: false,
+      isSending: false,
+      showError: false,
+      errors: {},
+    };
+  },
+
+  methods: {
+    sendLead() {
+      axios
+        .post(this.store.baseUrl + "api/leads", {
+          name: this.name,
+          email: this.email,
+          message: this.message,
+          newsletter: this.newsletter,
+        })
+        .then((response) => {
+          this.isSending = false;
+
+          if (response.data.success) {
+            this.showSuccess = true;
+            this.resetForm();
+          } else {
+            this.showError = true;
+            this.errors = response.data.errors;
+          }
+        });
     },
 
-    methods: {
-      sendLead(){
-        axios
-				.post(this.store.baseUrl + 'api/leads', {
-					name: this.name,
-					email: this.email,
-					message: this.message,
-					newsletter: this.newsletter,
-				})
-				.then(response => {
-					this.isSending = false;
-
-					if (response.data.success) {
-						this.showSuccess = true;
-						this.resetForm();
-					} else {
-						this.showError = true;
-						this.errors = response.data.errors;
-					}
-				});
-      },
-
-      resetForm(){
-        this.name = '';
-        this.email = '';
-        this.message = '';
-        this.newsletter = true;
-      }
+    resetForm() {
+      this.name = "";
+      this.email = "";
+      this.message = "";
+      this.newsletter = true;
     },
-  }
+  },
+};
 </script>
 
 <template>
-<div
-		v-if="showSuccess"
-		class="alert alert-success alert-dismissible fade show"
-		role="alert"
-	>
-		Messaggio inviato con successo
-		<button
-			type="button"
-			class="btn-close"
-			aria-label="Close"
-			@click="showSuccess = false"
-		></button>
-	</div>
+  <div
+    v-if="showSuccess"
+    class="alert alert-success alert-dismissible fade show"
+    role="alert"
+  >
+    Messaggio inviato con successo
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      @click="showSuccess = false"
+    ></button>
+  </div>
 
-	<div
-		v-if="showError"
-		class="alert alert-danger alert-dismissible fade show"
-		role="alert"
-	>
-		Errore nell'invio del messaggio
-		<button
-			type="button"
-			class="btn-close"
-			aria-label="Close"
-			@click="showError = false"
-		></button>
-	</div>
+  <div
+    v-if="showError"
+    class="alert alert-danger alert-dismissible fade show"
+    role="alert"
+  >
+    Errore nell'invio del messaggio
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      @click="showError = false"
+    ></button>
+  </div>
 
   <div class="p-0 m-0 d-flex content">
     <div class="left w-50">
-      <img src="https://images.unsplash.com/photo-1607622750671-6cd9a99eabd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="" />
+      <img
+        src="https://images.unsplash.com/photo-1607622750671-6cd9a99eabd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+        alt=""
+      />
     </div>
     <div class="align-self-center w-50 p-5">
       <h1 class="text-center text-light">Contattaci</h1>
@@ -120,15 +123,15 @@ import { store } from "../store"
             >Iscriviti alla nostra newsletter</label
           >
         </div>
-        <button type="submit" class="btn btn-primary">Invia</button>
+        <button type="submit" class="btn">Invia</button>
       </form>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.content{
-  height: calc(100vh - 126px)
+.content {
+  height: calc(100vh - 126px);
 }
 
 img {
@@ -143,5 +146,9 @@ label {
 
 .left {
   border: 3px solid lightgrey;
+}
+
+.btn {
+  background-color: white;
 }
 </style>
